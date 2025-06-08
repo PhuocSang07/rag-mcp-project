@@ -121,8 +121,8 @@ def load_document(file_path: str, file_type: str) -> List[Document]:
 def split_documents(documents: List[Document]) -> List[Document]:
     """Split documents into chunks for better retrieval."""
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200,
+        chunk_size=2048,
+        chunk_overlap=512,
         separators=["\n\n", "\n", " ", ""]
     )
     return text_splitter.split_documents(documents)
