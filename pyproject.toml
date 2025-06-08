@@ -1,0 +1,27 @@
+[project]
+name = "rag-mcp-server"
+version = "0.1.0"
+description = "RAG MCP Server with LangChain, Qdrant, and Gemini"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+ "langchain>=0.3.25",
+ "langchain-community>=0.3.24",
+ "langchain-google-genai>=2.1.5",
+ "langchain-qdrant>=0.2.0",
+ "mcp>=1.9.3",
+ "pypdf>=5.6.0",
+ "python-docx>=1.1.2",
+ "python-dotenv>=1.0.0",
+ "qdrant-client>=1.14.2",
+]
+[[project.authors]]
+name = "Tran Phuoc Sang"
+email = "transhack09@gmail.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+rag-mcp-server = "rag_mcp_server:main"
